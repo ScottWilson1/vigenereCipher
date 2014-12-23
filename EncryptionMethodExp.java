@@ -1,5 +1,5 @@
 package vigenereCipher;
-public class EncryptionMethod
+public class EncryptionMethodExp
 {
 	public void encryptionTablet(String key, String message) 
 	{

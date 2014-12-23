@@ -7,9 +7,9 @@ public class EncryptionDriver
 	{
 		Scanner input = new Scanner(System.in);
 		System.out.println("Give me your passkey");
-		String userPassKey = input.next();
+		String userPassKey = input.next().toUpperCase();
 		System.out.println("Give me your message");
-		String userMessage = input.next();
+		String userMessage = input.next().toUpperCase();
 		
 		EncryptionMethod myEncrypt = new EncryptionMethod();
 		myEncrypt.encryptionTablet(userPassKey, userMessage);
