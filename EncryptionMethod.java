@@ -11,7 +11,6 @@ public class EncryptionMethod
 		
 		// passkey String turned into char array
 		char[] keyArray = key.toCharArray();
-		//System.out.println(passKeyArray);
 		
 		// message String turned into char array
 		char[] messageArray = message.toCharArray();
@@ -41,14 +40,14 @@ public class EncryptionMethod
 		}//end for loop
 		
 		
-		for(int i = 0; i < messageArray.length; i++)
+		for(int i = 0; i < Math.max(keyArray.length, messageArray.length); i++)
 		{	
 			//assign each keyChar char to variable and increment
-			char keyChar = keyArray[i];
+			char keyChar = keyArray[i%keyArray.length];
 		
 			
 			//assign each messageChar char to variable and increment
-			char messageChar = messageArray[i];
+			char messageChar = messageArray[i%messageArray.length];
 		
 			//cast char to int
 			int keyCharPosition = (int)keyChar;
