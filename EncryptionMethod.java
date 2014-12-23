@@ -10,7 +10,7 @@ public class EncryptionMethod
 		char[][] tablet = new char[ROWS][COLS];
 		
 		// passkey String turned into char array
-		char[] passKeyArray = key.toCharArray();
+		char[] keyArray = key.toCharArray();
 		//System.out.println(passKeyArray);
 		
 		// message String turned into char array
@@ -44,19 +44,18 @@ public class EncryptionMethod
 		for(int i = 0; i < messageArray.length; i++)
 		{	
 			//assign each keyChar char to variable and increment
-			char myKeyChar = passKeyArray[i];
-			//System.out.println(myKeyChar);
+			char keyChar = keyArray[i];
+		
 			
 			//assign each messageChar char to variable and increment
-			char myMessageChar = messageArray[i];
-			//System.out.println(myMessageChar);
-			
-			int keyCharPosition = (int)myKeyChar;//cast char to int
-			//System.out.println(keyCharPosition);
-						
-			int messageCharPosition = (int)myMessageChar;//cast char to int
-			//System.out.println(messageCharPosition);
+			char messageChar = messageArray[i];
+		
+			//cast char to int
+			int keyCharPosition = (int)keyChar;
+		
+			//cast char to int
+			int messageCharPosition = (int)messageChar;
 			System.out.print(tablet[keyCharPosition-65][messageCharPosition-65]);
-		}
-	}
-}
+		}//end for loop
+	}//end encryptionTablet
+}//end class
