@@ -5,15 +5,17 @@ public class EncryptionMethod
 	{
 		int ROWS = 26;
 		int COLS = 26;
+		String keyUpcaseNoSpace = key.toUpperCase().replaceAll("[^a-zA-Z]+", "");
+		String messageUpcaseNoSpace = message.toUpperCase().replaceAll("[^a-zA-Z]+", "");
 		
 		// 2d alphabet char array as a tablet to encrypt message
 		char[][] tablet = new char[ROWS][COLS];
 		
 		// passkey String turned into char array
-		char[] keyArray = key.toCharArray();
+		char[] keyArray = keyUpcaseNoSpace.toCharArray();
 		
 		// message String turned into char array
-		char[] messageArray = message.toCharArray();
+		char[] messageArray = messageUpcaseNoSpace.toCharArray();
 		
 		// for loops to generate the tablet
 		
