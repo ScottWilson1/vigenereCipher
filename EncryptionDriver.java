@@ -17,23 +17,23 @@ public class EncryptionDriver
 			answer = input.nextLine();
 			if(answer.equals("1"))
 			{
-				System.out.println("Enter a unique passkey.");
-				String userPassKey = input.nextLine();
+				System.out.println("Enter a unique key phrase.");
+				String userKeyPhrase = input.nextLine();
 				System.out.println("Enter a message to be encrypted.");
 				String userMessage = input.nextLine();
 				System.out.println("Your message after encryption is: ");
 			
-				myEncrypt.encrypt(userPassKey, userMessage);//method encrypts the users message
+				myEncrypt.encrypt(userKeyPhrase, userMessage);//method encrypts the users message
 			}
 			else if(answer.equals("2"))
 			{
-				System.out.println("Enter the correct passkey.");
-				String decryptionPassKey = input.nextLine();
+				System.out.println("Enter the correct key phrase.");
+				String decryptionKeyPhrase = input.nextLine();
 				System.out.println("Enter the encrypted message.");
 				String encryptedMessage = input.nextLine();
 				System.out.println("You1r message after decryption is: ");
 			
-				myEncrypt.decrypt(decryptionPassKey, encryptedMessage);//decrypts the encrypted message
+				myEncrypt.decrypt(decryptionKeyPhrase, encryptedMessage);//decrypts the encrypted message
 			}
 			else
 			{
