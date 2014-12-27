@@ -1,11 +1,11 @@
 package vigenereCipher;
 import java.util.Scanner;
 
-public class EncryptionDriver
+public class VigenereDriver
 {
 	public static void main(String args[])
 	{
-		EncryptionMethod myEncrypt = new EncryptionMethod();
+		VigenereClass myVigenereClass = new VigenereClass();
 		Scanner input = new Scanner(System.in);
 		//Scanner inputTwo = new Scanner(System.in);
 		String answer = "0";
@@ -23,7 +23,7 @@ public class EncryptionDriver
 				String userMessage = input.nextLine();
 				System.out.println("Your message after encryption is: ");
 			
-				myEncrypt.encrypt(userKeyPhrase, userMessage);//method encrypts the users message
+				myVigenereClass.encrypt(userKeyPhrase, userMessage);//method encrypts the users message
 			}
 			else if(answer.equals("2"))
 			{
@@ -33,12 +33,12 @@ public class EncryptionDriver
 				String encryptedMessage = input.nextLine();
 				System.out.println("Your message after decryption is: ");
 			
-				myEncrypt.decrypt(decryptionKeyPhrase, encryptedMessage);//decrypts the encrypted message
+				myVigenereClass.decrypt(decryptionKeyPhrase, encryptedMessage);//decrypts the encrypted message
 			}
 			else
 			{
 				System.out.println("You must enter either (1) or (2) please try again.");//if invalid entry is entered
 			}
-		}	
-	}		
+		}input.close();
+	}	
 }
