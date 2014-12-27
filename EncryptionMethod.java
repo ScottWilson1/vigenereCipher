@@ -36,9 +36,7 @@ public class EncryptionMethod
 				letter = letter + 65;
 				
 				// cast int to char
-				char gridLetter = (char)letter;
-				
-				tablet[i][j] = gridLetter;;
+				tablet[i][j] = (char)letter;
 			}//end for loop
 		}//end for loop
 		
@@ -94,9 +92,7 @@ public class EncryptionMethod
 				letter = letter + 65;
 				
 				// cast int to char
-				char gridLetter = (char)letter;
-				
-				tablet[i][j] = gridLetter;;
+				tablet[i][j] = (char)letter;
 			}//end for loop
 		}//end for loop
 		

@@ -31,7 +31,7 @@ public class EncryptionDriver
 				String decryptionKeyPhrase = input.nextLine();
 				System.out.println("Enter the encrypted message.");
 				String encryptedMessage = input.nextLine();
-				System.out.println("You1r message after decryption is: ");
+				System.out.println("Your message after decryption is: ");
 			
 				myEncrypt.decrypt(decryptionKeyPhrase, encryptedMessage);//decrypts the encrypted message
 			}
