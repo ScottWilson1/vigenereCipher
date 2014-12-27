@@ -1,6 +1,6 @@
 package vigenereCipher;
 import java.util.Arrays;
-public class EncryptionMethod
+public class VigenereClass
 {
 	void encrypt(String key, String message) 
 	{
